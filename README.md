@@ -1,2 +1,2 @@
 # introduccion-mean-stack
-introducción al curos mean-stack
+introducción al curso mean-stack
