@@ -33,6 +33,7 @@ function cambiarYear(fecha){
     //TODO: Asegurarse que lo que llega es de tipo fecha
     if (fecha instanceof Date){
         fecha.setFullYear(1990);
+        console.log("el valor es un tipo de fecha");
         console.log("fecha de la funcion " + fecha.getFullYear());
     }
 }
@@ -80,9 +81,32 @@ function suma (num1, num2){
 
 console.log(suma(1));
 console.log(suma(1,2));
-console.log(suma(1,"pascual",3));
+console.log(suma(1,"pascual",3,otraFecha ));
 pruebaDeArgumentos();
 pruebaDeArgumentos(1);
 pruebaDeArgumentos("hola", 21, "pepito",43);
 console.log("inicio de ejemplos js con arrays");
+
+function testConArray(){
+    let mi_array = new Array();
+    mi_array[0]=7;
+    mi_array[1]="valor";
+    mi_array[mi_array.length-1];
+    let mi_otro_array = [];
+    let otro = ["uno",2, new Date()];
+    //Arrays asociativos
+    let array_arsociativo = new Array();
+    array_arsociativo['uno']=1;
+    array_arsociativo['dos']=2;
+    console.log(array_arsociativo['uno']);
+    let persona = new Array();
+    persona.nombre = "Ruben";
+    persona.apellido1 = "Gomez";
+    //Para poder almacenar la funcion en el array sin parametros
+    //y podremos llamarla como si fuera una funcion
+    persona.pruebaDeArgumentos = pruebaDeArgumentos;
+    console.log("Nombre completo: "+persona.nombre+" "+persona.apellido1);
+
+
+}
 console.log("Adios mundo cruel!");
