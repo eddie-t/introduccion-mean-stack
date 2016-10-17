@@ -110,3 +110,26 @@ function testConArray(){
 
 }
 console.log("Adios mundo cruel!");
+//crear clase
+function MiClase(campo1,campo2){
+    this.campo1=campo1;
+    this.campo2=campo2;
+}
+MiClase.prototype.miMetodo= function(){
+        return this.campo1 + "-" +this.campo2;
+}
+var miObjeto= new MiClase("uno","dos");
+console.log("El valor de la clave 1 es "+miObjeto.campo1);
+console.log("Mi objeto tiene: "+miObjeto.miMetodo());
+
+Array.prototype.contiene = function(valor){
+    for (let i= 0;i<this.length;i++){
+        if(this[i]==valor){
+            console.log("existe el valor");
+            return true;
+        }
+    }
+    return false;
+}
+let mi_array_de_prueba = [1,2,3,4];
+mi_array_de_prueba.contiene(3);
