@@ -1,15 +1,33 @@
-function suma(valor1,valor2){
-    return valor1+valor2;
+/*function calculadora{
+	var valor = 0;
 }
-function resta(valor1,valor2){
-    return valor1-valor2;
+calculadora.prototype.getValor = function(){
+	return valor;
 }
-function multiplicacion(valor1,valor2){
-    return valor1*valor2;
+calculadora.prototype.setValor = function(valor){
+	if (this.valor == 0){
+		this.valor=valor;
+	}
+	else{
+		this.valor=this.valor+valor;
+	}
 }
-function division(valor1,valor2){
-    return valor1/valor2;
+calculadora.prototype.suma =function (operando){
+    this.valor = this.valor+operando;
 }
-function agregar(valor){
-    alert (valor);
+calculadora.prototype.resta =function resta(operando){
+    this.valor = this.valor-operando;
+}
+calculadora.prototype.multiplicacion =function multiplicacion(operando){
+    this.valor = this.valor*operando;
+}
+calculadora.prototype.division =function (operando){
+    this.valor = this.valor/operando;
+}
+calculadora.prototype.agregar =function (){
+    alert (this.valor);
+}
+var calcular= new calculadora();*/
+function alerta(){
+	alert("pues eso");
 }

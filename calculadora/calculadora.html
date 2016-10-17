@@ -3,30 +3,39 @@
     <head>
         <meta charset="utf-8" />
         <title>Calculadora</title>
-        <script defer type="text/javascript" src="js/calculadora.js"></script>
+        <script type="text/javascript" src="js/calculadora.js">
+
+        </script>
+		<SCRIPT>
+		function miFuncion(){
+		   	//hago algo...
+		   	document.write("Esto va bien")
+		}
+</SCRIPT>
+
     </head>
     <body>
         <header><h1>Calculadora</h1></header>
         <section>
             <article>
-                <form>
-                    
+                <form name= formulario1>
+
                 <table border="1" cellspacing="10" font-size="25" >
                     <tr>
                     <td colspan="4"><input type="text" name ="visor" value=0></td>
                     </tr>
                  <tr>
-                    <td><input type="button" value="1" onclick="agregar(this)"/></td>
-                    <td><input type="button" value="1" onclick="alert (this)"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    
+                    <td><input type="button" name ="uno" value="1" onclick="escribirBienvenida()"/></td>
+                    <td><input type="button" name ="dos" value="2" onclick="alert (formulario1.dos.value)"/></td>
+                    <td><input type="button" name= "tres" value="3" onclick="alerta()"/></td>
+                    <td><input type="button" name = "suma" value="+" onclick="alert ('alert')"/></td>
+
                 </tr>
                 <tr>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
+                    <td><input type="button" value="1" onclick=""/></td>
+                    <td><input type="button" value="1" onclick=""/></td>
+                    <td><input type="button" value="1" onclick="miFuncion()"/></td>
+                    <td><input type="button" value="1" onclick=/></td>
                 </tr>
                 <tr>
                     <td><input type="button" value="1" onclick="alert ('alert')"/></td>
@@ -42,6 +51,7 @@
                 </tr>
                 </table>
                 </form>
+
             </article>
         </section>
     </body>
