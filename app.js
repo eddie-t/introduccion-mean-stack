@@ -95,10 +95,10 @@ function testConArray(){
     let mi_otro_array = [];
     let otro = ["uno",2, new Date()];
     //Arrays asociativos
-    let array_arsociativo = new Array();
-    array_arsociativo['uno']=1;
-    array_arsociativo['dos']=2;
-    console.log(array_arsociativo['uno']);
+    let array_asociativo = new Array();
+    array_asociativo['uno']=1;
+    array_asociativo['dos']=2;
+    console.log(array_asociativo['uno']);
     let persona = new Array();
     persona.nombre = "Ruben";
     persona.apellido1 = "Gomez";
@@ -133,3 +133,7 @@ Array.prototype.contiene = function(valor){
 }
 let mi_array_de_prueba = [1,2,3,4];
 mi_array_de_prueba.contiene(3);
+
+/texto a validar/.test("si hay texto a validar");
+let mi_info = [{uno:1,dos:2,tres:3},{uno:2,dos:3,tres:4}];
+console.log(mi_info[1].dos);
