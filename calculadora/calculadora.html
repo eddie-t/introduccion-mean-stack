@@ -3,51 +3,77 @@
     <head>
         <meta charset="utf-8" />
         <title>Calculadora</title>
-        <script type="text/javascript" src="js/calculadora.js">
-
-        </script>
 		<SCRIPT>
-		function miFuncion(){
-		   	//hago algo...
-		   	document.write("Esto va bien")
-		}
-</SCRIPT>
+
+			function escribir(elemento){
+				var valor= elemento.value;
+				var visor = document.getElementById("visor");
+				visor.value = parseInt(visor.value)*10+parseInt(valor);
+			}
+			function inicializar(){
+				var visor = document.getElementById("visor");
+				visor.value=0;
+			}
+			function operar(elemento){
+				visor.value=calcular.operar(visor.value,elemento.value);
+			}
+
+			function Calculadora() {
+			 	this.total = 0;
+				this.operador = "=";
+			}
+			Calculadora.prototype.inicializar = function() {
+				this.total = 0;
+				this.operador = "=";
+			}
+			Calculadora.prototype.suma = function(operando) {
+				this.total=parseInt(this.total)+parseInt(operando);
+			}
+			Calculadora.prototype.operar = function(operando,operacion){
+				if(this.operador=="+"){
+					this.suma(operando);
+				}
+				this.operador=operacion;
+				return this.total;
+			}
+			var calcular= new Calculadora();
+		</SCRIPT>
 
     </head>
     <body>
         <header><h1>Calculadora</h1></header>
         <section>
             <article>
-                <form name= formulario1>
+                <form id= formulario1>
 
                 <table border="1" cellspacing="10" font-size="25" >
                     <tr>
-                    <td colspan="4"><input type="text" name ="visor" value=0></td>
+                    <td colspan="4"><input type="text" id ="visor" value=0></td>
                     </tr>
                  <tr>
-                    <td><input type="button" name ="uno" value="1" onclick="escribirBienvenida()"/></td>
-                    <td><input type="button" name ="dos" value="2" onclick="alert (formulario1.dos.value)"/></td>
-                    <td><input type="button" name= "tres" value="3" onclick="alerta()"/></td>
-                    <td><input type="button" name = "suma" value="+" onclick="alert ('alert')"/></td>
+                    <td><input type="button" id ="uno" value="1" onclick="escribir(this)"/></td>
+                    <td><input type="button" id ="dos" value="2" onclick="escribir(this)"/></td>
+                    <td><input type="button" id= "tres" value="3" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "suma" value="+" onclick="operar(this)"/></td>
 
                 </tr>
                 <tr>
-                    <td><input type="button" value="1" onclick=""/></td>
-                    <td><input type="button" value="1" onclick=""/></td>
-                    <td><input type="button" value="1" onclick="miFuncion()"/></td>
-                    <td><input type="button" value="1" onclick=/></td>
+                    <td><input type="button" id = "cuatro" value="4" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "cinco" value="5" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "seis" value="6" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "resta" value="-" onclick=/></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
+                    <td><input type="button" id = "siete" value="7" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "ocho" value="8" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "nueve" value="9" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "multiplicacion" value="*" onclick="alert ('alert')"/></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
-                    <td><input type="button" value="1" onclick="alert ('alert')"/></td>
+                    <td><input type="button" id = "." value="." onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "cero" value="0" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "igual" value="=" onclick="escribir(this)"/></td>
+                    <td><input type="button" id = "ce" value="ce" onclick="inicializar()"/></td>
                 </tr>
                 </table>
                 </form>
