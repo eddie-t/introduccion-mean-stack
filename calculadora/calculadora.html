@@ -4,18 +4,26 @@
         <meta charset="utf-8" />
         <title>Calculadora</title>
 		<SCRIPT>
-
+            var operadorPulsado;
 			function escribir(elemento){
 				var valor= elemento.value;
 				var visor = document.getElementById("visor");
-				visor.value = parseInt(visor.value)*10+parseInt(valor);
+				if (operadorPulsado==false){
+                    visor.value = parseInt(visor.value)*10+parseInt(valor);
+                }
+                else{
+                    visor.value = parseInt(valor);
+                    operadorPulsado=false;
+                }
 			}
 			function inicializar(){
 				var visor = document.getElementById("visor");
 				visor.value=0;
+                operadorPulsado=true;
 			}
 			function operar(elemento){
-				visor.value=calcular.operar(visor.value,elemento.value);
+				operadorPulsado=true;
+                //visor.value=calcular.operar(visor.value,elemento.value);
 			}
 
 			function Calculadora() {
