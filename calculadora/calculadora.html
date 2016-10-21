@@ -3,51 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <title>Calculadora</title>
-		<SCRIPT>
-            var operadorPulsado;
-			function escribir(elemento){
-				var valor= elemento.value;
-				var visor = document.getElementById("visor");
-				if (operadorPulsado==false){
-                    visor.value = parseInt(visor.value)*10+parseInt(valor);
-                }
-                else{
-                    visor.value = parseInt(valor);
-                    operadorPulsado=false;
-                }
-			}
-			function inicializar(){
-				var visor = document.getElementById("visor");
-				visor.value=0;
-                operadorPulsado=true;
-			}
-			function operar(elemento){
-				operadorPulsado=true;
-                //visor.value=calcular.operar(visor.value,elemento.value);
-			}
-
-			function Calculadora() {
-			 	this.total = 0;
-				this.operador = "=";
-			}
-			Calculadora.prototype.inicializar = function() {
-				this.total = 0;
-				this.operador = "=";
-			}
-			Calculadora.prototype.suma = function(operando) {
-				this.total=parseInt(this.total)+parseInt(operando);
-			}
-			Calculadora.prototype.operar = function(operando,operacion){
-				if(this.operador=="+"){
-					this.suma(operando);
-				}
-				this.operador=operacion;
-				return this.total;
-			}
-			var calcular= new Calculadora();
-		</SCRIPT>
-
-    </head>
+        <script type="text/javascript" src="js/calculadora.js"></script>
+        <script type="text/javascript" src="js/funcionalidad.js"></script>
+   </head>
     <body>
         <header><h1>Calculadora</h1></header>
         <section>
