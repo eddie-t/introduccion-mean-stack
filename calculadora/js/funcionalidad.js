@@ -5,10 +5,24 @@ function escribir(elemento){
 	var valor= elemento.value;
 	var display=document.getElementById("visor");
 	if (operadorPulsado==false){
-        display.value = parseInt(display.value)*10+parseInt(valor);
+        //display.value = parseInt(display.value)*10+parseInt(valor);
+        if (valor=="."){
+           if(display.value.indexOf('.')==(-1)){
+              display.value=display.value+valor;
+           }
+        }
+        else{
+             display.value=display.value+valor;
+        }
+        
     }
     else{
-        display.value = parseInt(valor);
+        if(valor=="."){
+            display.value = "0.";
+        }
+        else{
+            display.value = valor;
+        }
         operadorPulsado=false;
     }
 }
@@ -20,14 +34,19 @@ function inicializar(){
 }
 function operar(elemento){
     var display=document.getElementById("visor");
-	operadorPulsado=true;
+	
     if(elemento.value!="="){
-        //display.value=calcular.total;
+
+        operadorPulsado=true;
+
         calcular.operar(display.value,elemento.value);
-    }
-    else{
         display.value=calcular.total;
     }
+    else {
+        calcular.operar(display.value,elemento.value);
+        display.value=calcular.total;
+    }
+
     
 }
 function valorMemoria(){

@@ -2,7 +2,7 @@ console.log("Hola mundo!");
 variableGlobales = "variablesGobales";
 var variableGlobalesConVar = "Esto sigue siendo una variable global";
 mi_funcion_con_var();
-mi_funcion_con_let();
+//mi_funcion_con_let();
 function mi_funcion_con_var(){
     var otraVariable = "esto es una variable local";
     for (var i= 0; i<10 ; i++){
