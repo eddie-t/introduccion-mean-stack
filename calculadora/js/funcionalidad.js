@@ -34,19 +34,19 @@ function inicializar(){
 }
 function operar(elemento){
     var display=document.getElementById("visor");
-	
-    if(elemento.value!="="){
+	operadorPulsado=true;
+    display.value=calcular.operar(display.value,elemento.value);
+    /*if(elemento.value!="="){
 
-        operadorPulsado=true;
-
-        calcular.operar(display.value,elemento.value);
-        display.value=calcular.total;
+       
+        //display.value=calcular.total;
     }
     else {
-        calcular.operar(display.value,elemento.value);
-        display.value=calcular.total;
+        display.value=calcular.operar(display.value,elemento.value);
+        operadorPulsado=true;
+        //=calcular.total;
     }
-
+*/
     
 }
 function valorMemoria(){

@@ -11,11 +11,16 @@ Calculadora.prototype.suma = function(operando) {
 }
 Calculadora.prototype.operar = function(operando,operacion){
 
-	this.total = eval(this.total + this.operador + operando); // 3+2
+	var valor = eval(this.total + this.operador + operando); // 3+2
 	if (operacion!="="){
 		this.operador=operacion;
+		this.total=valor;
 	} 
-	return this.total;
+	else{
+		this.limpiar();
+		//this.total=0;
+	}
+	return valor;
 	//this.operador=operacion;
 	//this.total;
 	
