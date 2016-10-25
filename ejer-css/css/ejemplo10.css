@@ -3,22 +3,22 @@
     font: 1em/1.3 Arial, Helvetica, sans-serif;
 }
 /* Todos los parrafos de pantalla */
- p {
+p {
     color: green;
 }
 /* Todos los parrafos contenidos en "primero" */
-/*#primero p {
+#uno p {
     color: #336699;
-}*/
+}
 /* todos los enlaces de la página */
 a {
     color: #CC3300;
 }
 /* Los elementos <em> contenidos en "primero" */
-/*mal {
+#uno em {
     background: #FFFFCC;
     padding: .1em;
-} */
+} 
 /* Todos los elementos <em> de clase "marcado" en toda la pagina */
 em[class=marcado] {
     background: #FFCC99;
@@ -26,6 +26,6 @@ em[class=marcado] {
     padding: .1em;
 }
 /* Elementos <span> contenidos en "dos" */
-mal {
+.dos * span {
     font-weight: bold;
 }
