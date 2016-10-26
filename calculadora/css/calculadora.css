@@ -1,3 +1,6 @@
+body{
+	background-color: #84AEB2;
+}
 h1{
     text-align: center;
 }
@@ -19,6 +22,7 @@ table {
 }
 #visor:hover{opacity: 1;}
 input{
+	font-weight:bold;
 	border-radius: 5px;
 	width: 100%;
 	height: 100%;
