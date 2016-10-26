@@ -15,7 +15,7 @@
 
                 <table border="1" cellspacing="10" font-size="25" >
                     <tr>
-                    <td colspan="4"><input type="text" id ="visor" value=0></td>
+                    <td colspan="4" id="superior"><input type="text" id ="visor" value=0 maxlength="27" readonly></td>
                     </tr>
                  <tr>
                     <td><input type="button" id = "siete" value="7" onclick="escribir(this)"/></td>
@@ -39,11 +39,11 @@
                 <tr>
                     <td><input type="button" id = "." value="." onclick="escribir(this)"/></td>
                     <td><input type="button" id = "cero" value="0" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "igual" value="=" onclick="operar(this)"/></td>
+                    <td><input type="button" id= "ce" value= "ce" onclick="inicializar()"/></td>
                     <td><input type="button" id = "division" value="/" onclick="operar(this)"/></td>
                 </tr>
                 <tr>
-                    <td><input type="button" id= "ce" value= "ce" onclick="inicializar()"/></td>
+	               	<td colspan="4" id="inferior"><input type="button" id = "igual" value="=" onclick="operar(this)"/></td>
                 </tr>
                 </table>
                 </form>
