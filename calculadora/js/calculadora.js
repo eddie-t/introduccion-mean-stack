@@ -2,36 +2,23 @@ function Calculadora() {
  	this.total = 0;
 	this.operador = "+";
 }
+//Devuelve valores a estado inicial
 Calculadora.prototype.limpiar = function() {
 	this.total = 0;
 	this.operador = "+";
 }
-Calculadora.prototype.suma = function(operando) {
-	this.total=parseInt(this.total)+parseInt(operando);
-}
+//realiza las operaciones 
+//parametros operando y operacion siguiente
+//Se realizan los calculos con operador grabado en Calculadora
 Calculadora.prototype.operar = function(operando,operacion){
 
-	var valor = eval(this.total + this.operador + operando); // 3+2
+	var valor = eval(this.total + this.operador + operando); 
 	if (operacion!="="){
 		this.operador=operacion;
 		this.total=valor;
 	} 
 	else{
 		this.limpiar();
-		//this.total=0;
 	}
 	return valor;
-	//this.operador=operacion;
-	//this.total;
-	
 }
-
-/* prueba */
-
-/*calc = new Calculadora();
-
-console.log(calc.operar(0,"+"));
-console.log(calc.operar(5,"-"));
-console.log(calc.operar(7,"+"));
-console.log(calc.operar(3,"-"));
-calc.limpiar();*/
