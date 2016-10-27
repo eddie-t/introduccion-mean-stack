@@ -1,46 +1,51 @@
-
+$(document).ready(inicializarEventos);
+function inicializarEventos(){
+    $(".numero").click(escribir);
+    $(".operacion").click(operar);
+    $("#ce").click(inicializar);
+}
 //Permite escribir en el display teniendo en cuenta
 //el punto y el inicio de la calculadora
-function escribir(elemento){
-	var valor= elemento.value;
-	var display=document.getElementById("visor");
-	if (operadorPulsado==false){
+function escribir(){
+    var valor= $(this).val();
+    var display=$("#visor");
+    if (operadorPulsado==false){
         if (valor=="."){
-           if(display.value.indexOf('.')==(-1)){
-              display.value=display.value+valor;
+           if(display.val().indexOf('.')==(-1)){
+              display.val(display.val()+valor);
            }
         }
         else{
-             display.value=display.value+valor;
+             display.val(display.val()+valor);
         }
-        
+
     }
     else{
         if(valor=="."){
-            display.value = "0.";
+            display.val("0.") ;
         }
         else{
-            display.value = valor;
+            display.val(valor);
         }
         operadorPulsado=false;
     }
 }
 //prepara la calculadora en un estado inicial
 function inicializar(){
-	var display=document.getElementById("visor");
-    display.value=0;
+    var display=$("#visor");
+    display.val(0);
     operadorPulsado=true;
     calcular.limpiar;
 }
 //llama a las operaciones de Calculadora
-function operar(elemento){
-    var display=document.getElementById("visor");
+function operar(){
+    let operador = $(this).val();
+    var display=$("#visor");
 	operadorPulsado=true;
-    display.value=calcular.operar(display.value,elemento.value);
-
+    display.val(calcular.operar(display.val(),operador));
 }
 var operadorPulsado;
 var valOperador="+";
-var display=document.getElementById("visor");
+var display=$("#visor");
 var calcular= new Calculadora();
 inicializar;

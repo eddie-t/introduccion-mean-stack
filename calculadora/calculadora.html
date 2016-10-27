@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Calculadora</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="js/calculadora.js"></script>
         <script type="text/javascript" src="js/funcionalidad.js"></script>
         <link rel="stylesheet" type="text/css" href="css/calculadora.css"/>
@@ -11,43 +12,39 @@
         <header><h1>Calculadora</h1></header>
         <section>
             <article>
-                <form id= formulario1>
-
                 <table>
                     <tr>
                     <td colspan="4" id="superior"><input type="text" id ="visor" value=0 maxlength="27" readonly></td>
                     </tr>
                  <tr>
-                    <td><input type="button" id = "siete" value="7" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "ocho" value="8" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "nueve" value="9" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "suma" value="+" onclick="operar(this)"/></td>
+                    <td><input type="button" class="numero" id = "siete" value="7" /></td>
+                    <td><input type="button" class="numero" id = "ocho" value="8" /></td>
+                    <td><input type="button" class="numero" class="numero" id = "nueve" value="9"/></td>
+                    <td><input type="button" class="operacion" id = "suma" value="+" /></td>
 
                 </tr>
                 <tr>
-                    <td><input type="button" id = "cuatro" value="4" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "cinco" value="5" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "seis" value="6" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "resta" value="-" onclick="operar(this)"/></td>
+                    <td><input type="button" class="numero" id = "cuatro" value="4" /></td>
+                    <td><input type="button" class="numero" id = "cinco" value="5" /></td>
+                    <td><input type="button" class="numero" id = "seis" value="6" /></td>
+                    <td><input type="button" class="operacion" id = "resta" value="-" /></td>
                 </tr>
                 <tr>
-                    <td><input type="button" id ="uno" value="1" onclick="escribir(this)"/></td>
-                    <td><input type="button" id ="dos" value="2" onclick="escribir(this)"/></td>
-                    <td><input type="button" id= "tres" value="3" onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "multiplicacion" value="*" onclick="operar(this)"/></td>
+                    <td><input type="button" class="numero" id ="uno" value="1" onclick="escribir(this)"/></td>
+                    <td><input type="button" class="numero" id ="dos" value="2" onclick="escribir(this)"/></td>
+                    <td><input type="button" class="numero" id= "tres" value="3" onclick="escribir(this)"/></td>
+                    <td><input type="button" class="operacion" id = "multiplicacion" value="*" /></td>
                 </tr>
                 <tr>
-                    <td><input type="button" id = "." value="." onclick="escribir(this)"/></td>
-                    <td><input type="button" id = "cero" value="0" onclick="escribir(this)"/></td>
-                    <td><input type="button" id= "ce" value= "ce" onclick="inicializar()"/></td>
-                    <td><input type="button" id = "division" value="/" onclick="operar(this)"/></td>
+                    <td><input type="button" class="numero" id = "." value="." /></td>
+                    <td><input type="button" class="numero" id = "cero" value="0" /></td>
+                    <td><input type="button" id= "ce" value= "ce"/></td>
+                    <td><input type="button" class="operacion" id = "division" value="/" /></td>
                 </tr>
                 <tr>
-	               	<td colspan="4" id="inferior"><input type="button" id = "igual" value="=" onclick="operar(this)"/></td>
+	               	<td colspan="4" id="inferior"><input type="button" class="operacion" id = "igual" value="=" /></td>
                 </tr>
                 </table>
-                </form>
-
             </article>
         </section>
     </body>

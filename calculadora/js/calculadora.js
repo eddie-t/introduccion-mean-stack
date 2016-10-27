@@ -21,4 +21,5 @@ Calculadora.prototype.operar = function(operando,operacion){
 		this.limpiar();
 	}
 	return valor;
+	
 }
